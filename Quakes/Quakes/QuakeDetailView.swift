@@ -1,12 +1,15 @@
 //
 //  QuakeDetailView.swift
-//  iOS6-Quakes
+//  Quakes
 //
 //  Created by Paul Solt on 7/11/19.
 //  Copyright © 2019 Lambda, Inc. All rights reserved.
 //
 
 import UIKit
+
+// TODO: Create the Quake class
+// TODO: Add the QuakeDetailView to the target (Identity Inspector) to get it to build
 
 class QuakeDetailView: UIView {
     
@@ -47,7 +50,6 @@ class QuakeDetailView: UIView {
     }
     
     // MARK: - Properties
-    
     var quake: Quake? {
         didSet {
             updateSubviews()
