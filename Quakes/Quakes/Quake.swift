@@ -9,6 +9,10 @@
 import Foundation
 import MapKit
 
+struct QuakeResults: Decodable {
+    let features: [Quake]
+}
+
 class Quake: NSObject, Decodable {
     
     
