@@ -74,7 +74,7 @@ class QuakeFetcher {
                 return
             }
             
-            print(data)
+//            print(data)
             
             do {
                 // TODO: Implement decoding
