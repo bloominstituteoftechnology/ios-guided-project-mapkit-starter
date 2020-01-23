@@ -10,12 +10,11 @@ import UIKit
 import MapKit
 
 class EarthquakesViewController: UIViewController {
-		
-	// NOTE: You need to import MapKit to link to MKMapView
-	@IBOutlet var mapView: MKMapView!
+    
+    @IBOutlet var mapView: MKMapView!
 	
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		
-	}
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
 }
