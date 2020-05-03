@@ -80,9 +80,11 @@ class QuakeFetcher {
                         
             do {
                 // TODO: Implement decoding and completion call
-
-
-                
+                let decoder = JSONDecoder()
+                //Setup date
+                decoder.dateDecodingStrategy = .millisecondsSince1970
+                let quakeResults = try decoder.decode(QuakeResults.self, from: data)
+                completion(quakeResults.quakes, nil)
             } catch {
                 print("Decoding error: \(error)")
                 DispatchQueue.main.async {
