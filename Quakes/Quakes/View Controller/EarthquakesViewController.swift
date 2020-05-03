@@ -68,6 +68,7 @@ extension EarthquakesViewController: MKMapViewDelegate {
         //Customized base on data
         annotationView.glyphImage = UIImage(named: "QuakeIcon")
         
+        //Change the color of the marker base on the severaty of the quake
         if let magnitude = quake.magnitude {
             if magnitude >= 5 {
                 annotationView.markerTintColor = .red
@@ -76,10 +77,16 @@ extension EarthquakesViewController: MKMapViewDelegate {
             }else{
                 annotationView.markerTintColor = .yellow
             }
-            
         }else{
+            //If there is no magnitude set to white
             annotationView.markerTintColor = .white
         }
+        
+        //New view when we tap on the pin showing details
+        annotationView.canShowCallout = true
+        let detailView = QuakeDetailView()
+        detailView.quake = quake
+        annotationView.detailCalloutAccessoryView = detailView
         
         return annotationView
     }
