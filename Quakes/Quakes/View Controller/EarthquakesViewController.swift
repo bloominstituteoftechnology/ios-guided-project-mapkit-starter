@@ -29,7 +29,18 @@ class EarthquakesViewController: UIViewController {
             }
             guard let quakes = quakes else {return}
             
-            print(quakes.count)
+            DispatchQueue.main.async {
+                //This create the pins on the map
+                self.mapView.addAnnotations(quakes)
+                
+                guard let quake = quakes.first else { return }
+                
+                let coordinateSpan = MKCoordinateSpan(latitudeDelta: 2, longitudeDelta: 2)
+                
+                let region = MKCoordinateRegion(center: quake.coordinate, span: coordinateSpan)
+                
+                self.mapView.setRegion(region, animated: true)
+            }
         }
-	}
+    }
 }

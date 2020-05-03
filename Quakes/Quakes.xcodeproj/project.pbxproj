@@ -10,6 +10,7 @@
 		04A59443245F08A50081FF68 /* Quake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A59442245F08A50081FF68 /* Quake.swift */; };
 		04A59446245F16C60081FF68 /* QuakeResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A59445245F16C50081FF68 /* QuakeResults.swift */; };
 		04A59447245F18CD0081FF68 /* QuakeFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD69304923F5DDAA00C0DF09 /* QuakeFetcher.swift */; };
+		04A59449245F21390081FF68 /* Quake+MKAnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A59448245F21390081FF68 /* Quake+MKAnotation.swift */; };
 		BD48251A236B3B6600FC12E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD482519236B3B6600FC12E9 /* AppDelegate.swift */; };
 		BD48251C236B3B6600FC12E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48251B236B3B6600FC12E9 /* SceneDelegate.swift */; };
 		BD482523236B3B6800FC12E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD482522236B3B6800FC12E9 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		04A59442245F08A50081FF68 /* Quake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quake.swift; sourceTree = "<group>"; };
 		04A59445245F16C50081FF68 /* QuakeResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeResults.swift; sourceTree = "<group>"; };
+		04A59448245F21390081FF68 /* Quake+MKAnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quake+MKAnotation.swift"; sourceTree = "<group>"; };
 		BD482516236B3B6600FC12E9 /* Quakes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quakes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD482519236B3B6600FC12E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD48251B236B3B6600FC12E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				04A59442245F08A50081FF68 /* Quake.swift */,
+				04A59448245F21390081FF68 /* Quake+MKAnotation.swift */,
 				04A59445245F16C50081FF68 /* QuakeResults.swift */,
 			);
 			path = Model;
@@ -269,6 +272,7 @@
 				BD48251A236B3B6600FC12E9 /* AppDelegate.swift in Sources */,
 				04A59443245F08A50081FF68 /* Quake.swift in Sources */,
 				BD48253C236B3BD500FC12E9 /* EarthquakesViewController.swift in Sources */,
+				04A59449245F21390081FF68 /* Quake+MKAnotation.swift in Sources */,
 				04A59447245F18CD0081FF68 /* QuakeFetcher.swift in Sources */,
 				04A59446245F16C60081FF68 /* QuakeResults.swift in Sources */,
 				BD48251C236B3B6600FC12E9 /* SceneDelegate.swift in Sources */,

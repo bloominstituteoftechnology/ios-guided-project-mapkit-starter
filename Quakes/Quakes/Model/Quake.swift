@@ -9,7 +9,7 @@
 import Foundation
 
 
-class Quake: Decodable {
+class Quake: NSObject, Decodable {
     
     enum CodingKeys: String, CodingKey {
         case magnitude = "mag"
@@ -38,7 +38,7 @@ class Quake: Decodable {
         //Second level inside the first "container"
         let properties = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .properties)
         //3rd level inside the first "properties"
-        let geometry = try properties.nestedContainer(keyedBy: CodingKeys.self, forKey: .geometry)
+        let geometry = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .geometry)
         //4th level inside the first "geometry"
         var coordinates = try geometry.nestedUnkeyedContainer(forKey: .coordinates)
         
@@ -50,5 +50,7 @@ class Quake: Decodable {
         //In the API Docs shows the following order in the unkey JSON:
         self.latitude = try coordinates.decode(Double.self)
         self.longitude = try coordinates.decode(Double.self)
+        
+        super.init()
     }
 }
