@@ -23,6 +23,10 @@ class EarthquakesViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+        mapView.delegate = self
+        //Create a reusable cell
+        mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "QuakeView")
+        
         quakeFetcher.fetchQuakes { (quakes, error) in
             if let error = error{
                 print("Error fetching quakes: \(error)")
@@ -43,5 +47,27 @@ class EarthquakesViewController: UIViewController {
                 self.mapView.setRegion(region, animated: true)
             }
         }
+    }
+}
+
+
+//MARK: - MKMapViewDelegate
+
+extension EarthquakesViewController: MKMapViewDelegate {
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        //Get quake
+        guard let quake = annotation as? Quake else {
+            fatalError("Only supporting quakes")
+        }
+        //Get anotationview
+        guard let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "QuakeView", for: quake) as? MKMarkerAnnotationView else {
+            fatalError("Missing register map anotation")
+        }
+        
+        //Customized base on data
+        annotationView.glyphImage = UIImage(named: "QuakeIcon")
+        
+        return annotationView
     }
 }
