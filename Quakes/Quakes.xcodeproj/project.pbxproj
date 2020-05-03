@@ -11,6 +11,7 @@
 		04A59446245F16C60081FF68 /* QuakeResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A59445245F16C50081FF68 /* QuakeResults.swift */; };
 		04A59447245F18CD0081FF68 /* QuakeFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD69304923F5DDAA00C0DF09 /* QuakeFetcher.swift */; };
 		04A59449245F21390081FF68 /* Quake+MKAnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A59448245F21390081FF68 /* Quake+MKAnotation.swift */; };
+		04A5944A245F4F480081FF68 /* QuakeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD482541236B3C4F00FC12E9 /* QuakeDetailView.swift */; };
 		BD48251A236B3B6600FC12E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD482519236B3B6600FC12E9 /* AppDelegate.swift */; };
 		BD48251C236B3B6600FC12E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48251B236B3B6600FC12E9 /* SceneDelegate.swift */; };
 		BD482523236B3B6800FC12E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD482522236B3B6800FC12E9 /* Assets.xcassets */; };
@@ -274,6 +275,7 @@
 				BD48253C236B3BD500FC12E9 /* EarthquakesViewController.swift in Sources */,
 				04A59449245F21390081FF68 /* Quake+MKAnotation.swift in Sources */,
 				04A59447245F18CD0081FF68 /* QuakeFetcher.swift in Sources */,
+				04A5944A245F4F480081FF68 /* QuakeDetailView.swift in Sources */,
 				04A59446245F16C60081FF68 /* QuakeResults.swift in Sources */,
 				BD48251C236B3B6600FC12E9 /* SceneDelegate.swift in Sources */,
 			);

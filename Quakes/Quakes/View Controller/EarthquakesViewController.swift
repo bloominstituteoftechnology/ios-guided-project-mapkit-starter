@@ -26,6 +26,7 @@ class EarthquakesViewController: UIViewController {
         quakeFetcher.fetchQuakes { (quakes, error) in
             if let error = error{
                 print("Error fetching quakes: \(error)")
+                return
             }
             guard let quakes = quakes else {return}
             
