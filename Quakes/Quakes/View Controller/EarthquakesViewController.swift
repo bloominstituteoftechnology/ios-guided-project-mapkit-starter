@@ -68,6 +68,19 @@ extension EarthquakesViewController: MKMapViewDelegate {
         //Customized base on data
         annotationView.glyphImage = UIImage(named: "QuakeIcon")
         
+        if let magnitude = quake.magnitude {
+            if magnitude >= 5 {
+                annotationView.markerTintColor = .red
+            } else if magnitude >= 3 && magnitude < 5 {
+                annotationView.markerTintColor = .orange
+            }else{
+                annotationView.markerTintColor = .yellow
+            }
+            
+        }else{
+            annotationView.markerTintColor = .white
+        }
+        
         return annotationView
     }
 }
