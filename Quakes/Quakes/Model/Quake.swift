@@ -25,7 +25,7 @@ class Quake: Decodable {
         case coordinates
     }
     
-    let magnitude: Double
+    let magnitude: Double?
     let time: Date
     let place: String
     let latitude: Double
@@ -44,7 +44,7 @@ class Quake: Decodable {
         
         
         //Extract our properties
-        self.magnitude = try properties.decode(Double.self, forKey: .magnitude)
+        self.magnitude = try? properties.decode(Double.self, forKey: .magnitude)//If nil it wont crash because of the try?
         self.time = try properties.decode(Date.self, forKey: .time)
         self.place = try properties.decode(String.self, forKey: .place)
         //In the API Docs shows the following order in the unkey JSON:
